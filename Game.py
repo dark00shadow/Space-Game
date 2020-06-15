@@ -8,7 +8,7 @@ Path0 = 'Textures/'
 Path1 = 'Textures/player/'
 Path2 = 'Textures/blocks/'
 Path3 = 'Textures/energy cell/'
-window = pyglet.window.Window(caption='Space Jam 001 Game', width=600, height=600)
+window = pyglet.window.Window(caption='Space Game', width=600, height=600)
 window.set_location(window.screen.width//2-window.width//2, window.screen.height//2-window.height//2)
 glEnable(GL_BLEND)
 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
