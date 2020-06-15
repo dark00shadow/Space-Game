@@ -11,9 +11,9 @@ Path3 = 'Textures/energy cell/'
 window = pyglet.window.Window(caption='Space Jam 001 Game', width=600, height=600)
 window.set_location(window.screen.width//2-window.width//2, window.screen.height//2-window.height//2)
 glEnable(GL_BLEND)
-icon = Path1+ 'icon.ico'
-window.set_icon(icon)
 glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+icon = pyglet.image.load(Path0+ 'icon.ico')
+window.set_icon(icon)
 background = pyglet.image.load(Path0 + 'background1.png')
 KeyH = key.KeyStateHandler()
 window.push_handlers(KeyH)
@@ -48,8 +48,8 @@ class Label():
     label = pyglet.text.Label('points:' + str(points), x=posx,y=posy,color=(0, 0, 255, 255))
 def solid(obj1x,obj1y,obj2x,obj2y,obj1w,obj1h,obj2w,obj2h):
     if RectangleCollision.collision.rectangle(energy_cell.posx,energy_cell.posy,obj2x,obj2y,18,28,obj2w,obj2h):
-        posx = randint(200,400)
-        posy = randint(200,400)
+        energy_cell.posx = randint(200,400)
+        energy_cell.posy = randint(200,400)
     if RectangleCollision.collision.rectangle(obj1x,obj1y,obj2x,obj2y,obj1w,obj1h,obj2w,obj2h):
         if player.direction == 'up': player.posy -= player.speed
         if player.direction == 'down': player.posy += player.speed
