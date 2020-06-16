@@ -1,6 +1,10 @@
 # Space Jam 001 Game
  this is a game made for a game jam
 
+itch.io link: https://shadow001.itch.io/space-game
+
+github link: https://github.com/dark00shadow/Space-Game
+
 # How to install
 Press the download zip button on github and then extract it
 
